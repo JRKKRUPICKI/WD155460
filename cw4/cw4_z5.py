@@ -10,20 +10,12 @@ class CiagArytmetyczny:
         print(f"a1={self.a1} r={self.r} n={self.n}")
     
     def pobierz_elemety(self):
-        print("a1=")
-        self.a1 = int(sys.stdin.readline())
-        print("r=")
-        self.r = int(sys.stdin.readline())
-        print("n=")
-        self.n = int(sys.stdin.readline())
+        print(f"a1={self.a1} a2={self.a1 + self.r} a3={self.a1 + 2 * self.r}")
     
     def pobierz_parametry(self):
-        print("a1=")
-        self.a1 = int(sys.stdin.readline())
-        print("r=")
-        self.r = int(sys.stdin.readline())
-        print("n=")
-        self.n = int(sys.stdin.readline())
+        self.a1 = int(input("a1="))
+        self.r = int(input("r="))
+        self.n = int(input("n="))
     
     def policz_sume(self):
         return (2 * self.a1 + (self.n - 1) * self.r) / 2 * self.n
@@ -34,5 +26,6 @@ class CiagArytmetyczny:
 ca = CiagArytmetyczny()
 ca.pobierz_parametry()
 ca.wyswietl_dane()
+ca.pobierz_elemety()
 print(ca.policz_sume())
 print(ca.policz_elementy())
